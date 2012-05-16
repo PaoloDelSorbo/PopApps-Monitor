@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Fan>
+@{
     ViewBag.Title = "PopApps Monitoring";
 }
 
@@ -6,7 +7,14 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div style="background-color: #0ff" class="span1">
-          latosx
+        <ul>
+        @foreach(var fan in Model)
+        {
+            <li>
+                @fan.LastName
+            </li>
+        }
+        </ul>
     </div>
     <div style="background-color: #ffd800" class="span11">
         latodx
